@@ -12,14 +12,9 @@ public class Startup {
 	
 	public static void main(String[] args) throws Exception {
 	
-		String baseSrcDir = "E:\\JavaProjects\\fcow\\utm-model\\thrift\\";
+		String baseSrcDir = System.getProperty("user.dir")+"\\demo\\";
 		List<String> filePathList = new ArrayList<>();
-		filePathList.add(baseSrcDir + "General.thrift");
-		filePathList.add(baseSrcDir + "User.thrift");
-		filePathList.add(baseSrcDir + "Device.thrift");
-		filePathList.add(baseSrcDir + "Route.thrift");
-		filePathList.add(baseSrcDir + "Para.thrift");
-		filePathList.add(baseSrcDir + "Drone.thrift");
+		filePathList.add(baseSrcDir + "Demo.thrift");
 
 		genCpp(filePathList);
 		
