@@ -17,30 +17,52 @@ https://github.com/addriumruss/json
 
 示例:
 thrift脚本(详见demo\Demo.thrift文件): 
+
 namespace cpp demo
+
 namespace java com.shg.edu.sch
+
 //include "other.thrift"
+
 /** 这个是学校对象 */
+
 struct School{
+
     /** 名称, 注意字段需要附带索引和optional或required标志 */
+    
 	1: optional string name, 
+	
 	/** 序号 */
+	
 	2: optional i64 sn = 0l, 
+	
 }
+
 /** 这个是学生对象 */
+
 struct Student{
+
     /** 名称, 注意字段需要附带索引和optional或required标志 */
+    
 	1: optional string name, 
+	
 	/** 消息的序列号 */
+	
 	2: optional i32 id = 128, 
+	
 }
 
 
 生成的c++代码:
+
 demo\cpp\demo.h
 
+
 生成的Java代码:
+
 demo\java\com\shg\edu\sch\School.java
+
 demo\java\com\shg\edu\sch\Student.java
+
 
 
